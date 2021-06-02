@@ -138,8 +138,20 @@ img {
   margin-left: auto;
 }
 
-.head-contacts .item + .item {
+/*.head-contacts .item + .item {
   margin-left: 50px;
+}*/
+
+.head-contacts .item:nth-child(even) {
+  margin-right: 30px;
+}
+
+.head-contacts .item:nth-child(odd) {
+  margin-right: 10px;
+}
+
+.head-contacts .item:last-child {
+  margin-right: 0;
 }
 
 .head-contacts .link {
@@ -158,6 +170,31 @@ img {
 .head-contacts .link:hover,
 .head-contacts .link:focus {
   color: var(--accent-color);
+}
+
+/* ~~~~~~ Head Contacts Icons ~~~~~~ */
+.head-contacts-icon {
+  fill: var(--text-color);
+}
+
+.head-contacts-icon:hover,
+.head-contacts-icon:focus {
+  fill: var(--accent-color);
+}
+
+.head-contacts-icon.envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.head-contacts .link.icon-envelope {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+.head-contacts-icon.smartphone {
+  width: 10px;
+  height: 16px;
 }
 
 /* ===================== MAIN ====================== */
@@ -233,7 +270,15 @@ img {
 }
 
 /* ~~~~~~ Icons ~~~~~~ */
-.features-list .item::before {
+
+.company-characteristics-icon {
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--third-background-color);
+}
+
+/*.features-list .item::before {
   display: block;
   content: '';
   height: 120px;
@@ -257,7 +302,7 @@ img {
 
 .features-list .item.icon-astronaut::before {
   background-image: url(../images/main_features/astronaut4.svg);
-}
+}*/
 
 .features-list .title {
   margin-top: 0;
@@ -348,6 +393,40 @@ img {
   padding-bottom: 30px;
   text-align: center;
   background-color: var(--primary-white-color);
+}
+
+/* ~~~~~~ Workers Icons List ~~~~~~ */
+
+.workers-icons-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.workers-icons-list .item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.workers-icons-list .link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.workers-icons-list .item .link:hover {
+  background-color: #2196f3;
+}
+
+.workers-icons-list .icon {
+  fill: #afb1b8;
+  width: 20px;
+  height: 20px;
+  background-position: 50% 50%;
+}
+
+.workers-icons-list .item .icon:hover {
+  fill: #fff;
 }
 
 /* =========================== FOOTER =========================== */
