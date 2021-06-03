@@ -19,6 +19,7 @@ background      #f5f4fa
   --text-color: #757575;
   --third-background-color: #f5f4fa;
   --black-text-color: #000;
+  --details-grey-color: #afb1b8;
 
   --projects-list-gap: 30px;
   --portfolio-card-border: 1px solid #eeeeee;
@@ -101,16 +102,16 @@ img {
 }
 
 /* ~~~~~~~ site navigation ~~~~~~~ */
-.site-nav {
+.site-nav-list {
   display: flex;
   margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav-item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav .link {
+.site-nav-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -123,38 +124,34 @@ img {
   text-decoration: none;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav-link:hover,
+.site-nav-link:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current {
+.site-nav-link.current {
   color: var(--accent-color);
 }
 
 /* ~~~~~~~ Head Contacts ~~~~~~~ */
-.head-contacts {
+.head-contacts-list {
   display: flex;
   margin-left: auto;
 }
 
-/*.head-contacts .item + .item {
-  margin-left: 50px;
-}*/
-
-.head-contacts .item:nth-child(even) {
+.head-contacts-item:nth-child(even) {
   margin-right: 30px;
 }
 
-.head-contacts .item:nth-child(odd) {
+.head-contacts-item:nth-child(odd) {
   margin-right: 10px;
 }
 
-.head-contacts .item:last-child {
+.head-contacts-item:last-child {
   margin-right: 0;
 }
 
-.head-contacts .link {
+.head-contacts-link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -167,8 +164,8 @@ img {
   text-decoration: none;
 }
 
-.head-contacts .link:hover,
-.head-contacts .link:focus {
+.head-contacts-link:hover,
+.head-contacts-link:focus {
   color: var(--accent-color);
 }
 
@@ -182,19 +179,9 @@ img {
   fill: var(--accent-color);
 }
 
-.head-contacts-icon.envelope {
-  width: 16px;
-  height: 12px;
-}
-
-.head-contacts .link.icon-envelope {
+.head-contacts-icon-envelope {
   padding-top: 34px;
   padding-bottom: 34px;
-}
-
-.head-contacts-icon.smartphone {
-  width: 10px;
-  height: 16px;
 }
 
 /* ===================== MAIN ====================== */
@@ -269,46 +256,24 @@ img {
   margin-right: 30px;
 }
 
-/* ~~~~~~ Icons ~~~~~~ */
-
+/* ~~~~~~ Company Characteristics Icons ~~~~~~ */
 .company-characteristics-icon {
+  display: flex;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
   background-color: var(--third-background-color);
 }
 
-/*.features-list .item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: var(--third-background-color);
+.features-icon {
+  margin-top: 25px;
+  margin-left: 100px;
 }
 
-.features-list .item.icon-antenna::before {
-  background-image: url(../images/main_features/antenna1.svg);
-}
-
-.features-list .item.icon-clock::before {
-  background-image: url(../images/main_features/clock2.svg);
-}
-
-.features-list .item.icon-diagram::before {
-  background-image: url(../images/main_features/diagram3.svg);
-}
-
-.features-list .item.icon-astronaut::before {
-  background-image: url(../images/main_features/astronaut4.svg);
-}*/
-
-.features-list .title {
+.features-title {
   margin-top: 0;
   margin-bottom: 10px;
 
-  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   color: var(--headers-color);
@@ -316,7 +281,7 @@ img {
   text-transform: uppercase;
 }
 
-.features-list .text {
+.features-text {
   font-size: 14px;
   line-height: 1.7;
 }
@@ -330,7 +295,6 @@ img {
   margin-top: 0;
   margin-bottom: 50px;
 
-  font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   color: var(--headers-color);
@@ -341,12 +305,12 @@ img {
   display: flex;
 }
 
-.occupation-list .item {
+.occupation-item {
   margin-bottom: 0;
   width: calc((100% - 60px) / 3);
 }
 
-.occupation-list .item:not(:last-child) {
+.occupation-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -359,15 +323,15 @@ img {
   display: flex;
 }
 
-.workers-list .item {
+.workers-list-item {
   width: calc((100% - 90px) / 4);
 }
 
-.workers-list .item:not(:last-child) {
+.workers-list-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.workers-list .title {
+.workers-list-title {
   color: var(--headers-color);
 
   font-weight: 500;
@@ -375,7 +339,7 @@ img {
   line-height: 1.9;
 }
 
-.workers-list .text {
+.workers-list-text {
   margin-top: 10px;
   font-size: 16px;
   line-height: 1.18;
@@ -396,37 +360,86 @@ img {
 }
 
 /* ~~~~~~ Workers Icons List ~~~~~~ */
-
 .workers-icons-list {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
 
-.workers-icons-list .item:not(:last-child) {
+.workers-icons-list-item:not(:last-child) {
   margin-right: 10px;
 }
 
-.workers-icons-list .link {
-  display: block;
+.workers-icons-list-link {
+  display: flex;
   width: 44px;
   height: 44px;
   border-radius: 50%;
 }
 
-.workers-icons-list .item .link:hover {
-  background-color: #2196f3;
+.workers-icons-list-link:hover,
+.workers-icons-list-link:focus {
+  background-color: var(--accent-color);
 }
 
-.workers-icons-list .icon {
-  fill: #afb1b8;
-  width: 20px;
-  height: 20px;
-  background-position: 50% 50%;
-}
-
-.workers-icons-list .item .icon:hover {
+.workers-icons-list-link:hover svg {
   fill: #fff;
+}
+
+.workers-icons-list-link:focus svg {
+  fill: #fff;
+}
+
+.workers-icons-list-icon {
+  fill: var(--details-grey-color);
+  align-items: center;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.workers-icons-list-icon:hover,
+.workers-icons-list-icon:focus {
+  fill: #fff;
+}
+
+/* ====================== Постоянные Клиенты ===================== */
+.clients-list {
+  display: flex;
+}
+
+.clients-list-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--details-grey-color);
+  border-radius: 4px;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list-icon {
+  margin-top: 16px;
+  margin-left: 32px;
+  width: 106px;
+  height: 60px;
+  fill: var(--details-grey-color);
+}
+
+.clients-list-icon:hover,
+.clients-list-icon:focus {
+  fill: var(--accent-color);
+}
+
+.clients-list-link:hover svg,
+.clients-list-link:focus svg {
+  fill: var(--accent-color);
 }
 
 /* =========================== FOOTER =========================== */
@@ -439,11 +452,15 @@ img {
 
 .footer-container {
   display: flex;
+}
+
+.footer-contacts-container {
+  display: flex;
   flex-direction: column;
 }
 
 /* ~~~~~~~ footer logo ~~~~~~~ */
-.footer {
+.footer-contacts-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -485,6 +502,52 @@ img {
   color: var(--accent-color);
 }
 
+/* ~~~~~~ Social Networks Icons ~~~~~~ */
+.footer-social-networks-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--primary-white-color);
+  text-transform: uppercase;
+}
+
+.footer-social-networks-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-left: 70px;
+}
+
+.social-networks-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.social-networks-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-networks-list-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-networks-list-link:hover,
+.social-networks-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-networks-list-icon {
+  margin-top: 12px;
+  margin-left: 12px;
+  fill: var(--primary-white-color);
+}
+
 /* ========================== PORTFOLIO ====================== */
 /* ~~~~~~~ Buttons ~~~~~~~ */
 .buttons-list {
@@ -511,7 +574,7 @@ img {
   cursor: pointer;
 }
 
-.buttons-list .item:not(:last-child) {
+.buttons-list-item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -531,7 +594,7 @@ img {
   margin-top: calc(-1 * var(--projects-list-gap));
 }
 
-.projects-list .item {
+.projects-list-item {
   flex-basis: calc(100% / 3 - var(--projects-list-gap));
   margin-left: var(--projects-list-gap);
   margin-top: var(--projects-list-gap);
@@ -541,8 +604,6 @@ img {
 
 .projects-list .title {
   color: var(--headers-color);
-
-  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
