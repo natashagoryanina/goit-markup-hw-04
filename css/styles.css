@@ -139,20 +139,12 @@ img {
   margin-left: auto;
 }
 
-.head-contacts-item:nth-child(even) {
+.head-contacts-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.head-contacts-item:nth-child(odd) {
-  margin-right: 10px;
-}
-
-.head-contacts-item:last-child {
-  margin-right: 0;
-}
-
 .head-contacts-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -162,6 +154,8 @@ img {
   color: var(--text-color);
   letter-spacing: 0.02em;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .head-contacts-link:hover,
@@ -172,16 +166,12 @@ img {
 /* ~~~~~~ Head Contacts Icons ~~~~~~ */
 .head-contacts-icon {
   fill: var(--text-color);
+  margin-right: 10px;
 }
 
-.head-contacts-icon:hover,
-.head-contacts-icon:focus {
+.head-contacts-link:hover svg,
+.head-contacts-link:focus svg {
   fill: var(--accent-color);
-}
-
-.head-contacts-icon-envelope {
-  padding-top: 34px;
-  padding-bottom: 34px;
 }
 
 /* ===================== MAIN ====================== */
@@ -263,11 +253,8 @@ img {
   width: 270px;
   height: 120px;
   background-color: var(--third-background-color);
-}
-
-.features-icon {
-  margin-top: 25px;
-  margin-left: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
 .features-title {
@@ -375,6 +362,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 .workers-icons-list-link:hover,
@@ -393,8 +382,6 @@ img {
 .workers-icons-list-icon {
   fill: var(--details-grey-color);
   align-items: center;
-  margin-top: 12px;
-  margin-left: 12px;
 }
 
 .workers-icons-list-icon:hover,
@@ -413,6 +400,8 @@ img {
   height: 92px;
   border: 1px solid var(--details-grey-color);
   border-radius: 4px;
+  align-items: center;
+  justify-content: center;
 }
 
 .clients-list-link:hover,
@@ -425,8 +414,6 @@ img {
 }
 
 .clients-list-icon {
-  margin-top: 16px;
-  margin-left: 32px;
   width: 106px;
   height: 60px;
   fill: var(--details-grey-color);
@@ -535,6 +522,8 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
 }
 
 .social-networks-list-link:hover,
@@ -543,8 +532,6 @@ img {
 }
 
 .social-networks-list-icon {
-  margin-top: 12px;
-  margin-left: 12px;
   fill: var(--primary-white-color);
 }
 
